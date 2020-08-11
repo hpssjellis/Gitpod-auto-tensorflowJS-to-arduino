@@ -3,12 +3,12 @@ image:
   
   
 tasks:
-  -  init:pip install tf-nightly                                                   &&
+  - init: pip install tf-nightly                                                   &&
           pip install tensorflowjs                                                 &&
           pip install netron                                                       &&
           cd myFolder                                                              &&
-          chmod +x a01-go.sh                                                       &&      
-          ./a01-go.sh                                                              
+          chmod +x a01-convert-tfjs-arduino.sh                                     &&      
+          ./a01-convert-tfjs-arduino.sh                                                             
                                                                                    
 
               
