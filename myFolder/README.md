@@ -1,7 +1,7 @@
 Put your TensorflowJS saved models into this folder and run the command (Note: the tab key auto fills after a few letters)
 
 ```
-a01-convert-tfjs-arduino.sh
+./a01-convert-tfjs-arduino.sh
 
 ```
 
