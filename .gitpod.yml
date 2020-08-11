@@ -9,7 +9,7 @@ tasks:
           pip install netron                                                       &&
           cd myFolder                                                              &&
           chmod +x a01-go.sh                                                       &&      
-          ./a01-go.sh                                                              &&
+          ./a01-go.sh                                                              
                                                                                    
 
               
