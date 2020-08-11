@@ -1,5 +1,5 @@
 image:
-  file: gitpod/workspace-full:latest
+  from: gitpod/workspace-full:latest
   
   
 tasks:
