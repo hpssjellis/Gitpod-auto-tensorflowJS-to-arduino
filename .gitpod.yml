@@ -11,6 +11,9 @@ tasks:
           ./a01-convert-tfjs-arduino.sh                                            &&                                             
           cd ..                                                                    &&
           cd myFolder                                                              &&
+          tflite_convert --help                                                    &&
+          tensorflowjs_converter --help                                            &&
+          xxd --help                                                               &&
           echo "upload your model.json and model.weights.bin files here then run ./a01-convert-tfjs-arduino.sh"                                                                                                                          
 
               
