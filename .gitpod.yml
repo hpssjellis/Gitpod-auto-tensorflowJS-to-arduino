@@ -1,0 +1,15 @@
+image:
+  file: gitpod/workspace-full:latest
+  
+  
+tasks:
+  -  init:                                                                         &&
+          pip install tf-nightly                                                   &&
+          pip install tensorflowj                                                  &&
+          pip install netron                                                       &&
+          cd myFolder                                                              &&
+          chmod +x a01-go.sh                                                       &&      
+          ./a01-go.sh                                                              &&
+                                                                                   
+
+              
