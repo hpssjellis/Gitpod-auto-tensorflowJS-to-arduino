@@ -3,8 +3,7 @@ image:
   
   
 tasks:
-  -  init:                                                                         &&
-          pip install tf-nightly                                                   &&
+  -  init:pip install tf-nightly                                                   &&
           pip install tensorflowj                                                  &&
           pip install netron                                                       &&
           cd myFolder                                                              &&
