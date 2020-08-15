@@ -13,4 +13,10 @@ This gitpod converter at
 https://github.com/hpssjellis/Gitpod-auto-tensorflowJS-to-arduino
 
 
+Still working on this but this bit of code does some interesting stuff from the TF hub
 
+
+```
+tensorflowjs_converter --input_format=tf_hub --quantization_bytes=1 'https://tfhub.dev/google/imagenet/mobilenet_v1_100_224/classification/1' web_model
+
+```
