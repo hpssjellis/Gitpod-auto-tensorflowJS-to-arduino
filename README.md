@@ -29,5 +29,27 @@ const unsigned char model_tflite[] = {
 
 
 
+Useful code for saving your models
+
+```
+
+Local or Download file name <input type="text" id="myFileName" value="model"> 
+
+<input id="myFile5858" type="button" value="Save As..." onclick="{	
+   ( async function (){									    
+          const saveResults2 = await model4949.save('downloads://'+document.getElementById('myFileName').value);							    
+          document.getElementById('myText02').value = JSON.stringify(saveResults2)									
+	  //document.getElementById('myDiv4949').innerHTML += JSON.stringify(JSON.parse(saveResults2), null, 3)  
+	  await model4949.summary(null,null,x => {document.getElementById('myDiv4949').innerHTML += x + '<br>'});
+   })()  // inline async function								     
+}"><br>	
+
+
+<div id='myDiv4949'>...</div><br>
+
+```
+
+
+
 
 
