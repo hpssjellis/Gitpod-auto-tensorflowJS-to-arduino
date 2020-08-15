@@ -31,8 +31,15 @@ To:
 
 https://storage.googleapis.com/tfhub-modules/google/universal-sentence-encoder/1.tar.gz
 
-curl https://storage.googleapis.com/tfhub-modules/google/universal-sentence-encoder/1.tar.gz
+curl -LO https://storage.googleapis.com/tfhub-modules/google/universal-sentence-encoder/1.tar.gz
 tar xvzf imagenet_mobileTF.tar.gz
+
+
+
+curl -LO https://storage.googleapis.com/tfhub-modules/google/aiy/vision/classifier/birds_V1/1.tar.gz
+tar xvzf 1.tar.gz
+
+
 
 
 ```
