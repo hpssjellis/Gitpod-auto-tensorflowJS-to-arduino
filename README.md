@@ -51,5 +51,35 @@ Local or Download file name <input type="text" id="myFileName" value="model">
 
 
 
+The main bash command file is, you could run these individually
+```
+  
+#!/bin/bash
+
+echo "Problem: When you change the file name of a TFJS model with it's shard files, you also must change the PATHS in the .json file"
+echo "Easier to not change the models file names"
+echo "Enter the name of your TensorflowJS .json saved model with the .json exctension, example: model.json"
+read myFile
+echo $myFile
+
+tensorflowjs_converter --input_format=tfjs_layers_model --output_format=keras_saved_model ./$myFile ./
+tflite_convert --keras_model_file ./ --output_file ./model.tflite
+xxd -i model.tflite model.h
+
+
+```
+or if the file is called model.json then 
+
+
+```
+  
+#!/bin/bash
+
+tensorflowjs_converter --input_format=tfjs_layers_model --output_format=keras_saved_model ./model.json ./
+tflite_convert --keras_model_file ./ --output_file ./model.tflite
+xxd -i model.tflite model.h
+
+
+```
 
 
