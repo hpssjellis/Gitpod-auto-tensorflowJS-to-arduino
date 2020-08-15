@@ -36,3 +36,17 @@ tar xvzf imagenet_mobileTF.tar.gz
 
 
 ```
+
+
+
+This does generate a tfjs file from the tf-hub with this warning
+
+"Warning: --quantization_bytes will be deprecated in a future release Please consider using --quantize_uint8, --quantize_uint16, --quantize_float16."
+
+
+unfortuantely the output is quantizied and I am having troubles converting that to TFLite
+
+```
+tensorflowjs_converter --input_format=tf_hub  'https://tfhub.dev/google/imagenet/mobilenet_v1_100_224/classification/3' ./
+
+```
