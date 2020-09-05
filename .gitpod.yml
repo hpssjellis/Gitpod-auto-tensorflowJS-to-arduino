@@ -9,14 +9,10 @@ tasks:
           cd myExample                                                             &&
           chmod +x a01-convert-tfjs-arduino.sh                                     && 
           chmod +x a02-tfjs-read.json.sh                                           && 
-          chmod +x a03-tfjs-quantized-8bit.sh                                      && 
-          chmod +x a04-tfjs-quantized-16bit.sh                                     && 
-          chmod +x a05-quantized-float16.sh                                        &&     
+          chmod +x a03-tflite-multi-quantized.sh                                   &&    
           cp  a01-convert-tfjs-arduino.sh ../myFolder                              && 
           cp  a02-tfjs-read.json.sh ../myFolder                                    && 
-          cp  a03-tfjs-quantized-8bit.sh ../myFolder                               && 
-          cp  a04-tfjs-quantized-16bit.sh ../myFolder                              && 
-          cp  a05-quantized-float16.sh ../myFolder                                 && 
+          cp  a03-tflite-multi-quantized.sh ../myFolder                            && 
           ./a01-convert-tfjs-arduino.sh                                            &&                                             
           cd ..                                                                    &&
           cd myFolder                                                              &&
