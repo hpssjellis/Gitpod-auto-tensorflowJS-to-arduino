@@ -56,4 +56,101 @@ unfortuantely the output is quantizied and I am having troubles converting that 
 ```
 tensorflowjs_converter --input_format=tf_hub  'https://tfhub.dev/google/imagenet/mobilenet_v1_100_224/classification/3' ./
 
+
+
+```
+
+
+
+Things I am working on
+
+```
+
+usage: tflite_convert.py [-h] --output_file OUTPUT_FILE
+                          (--graph_def_file GRAPH_DEF_FILE | --saved_model_dir SAVED_MODEL_DIR)
+                          [--output_format {TFLITE,GRAPHVIZ_DOT}]
+                          [--inference_type {FLOAT,QUANTIZED_UINT8}]
+                          [--inference_input_type {FLOAT,QUANTIZED_UINT8}]
+                          [--input_arrays INPUT_ARRAYS]
+                          [--input_shapes INPUT_SHAPES]
+                          [--output_arrays OUTPUT_ARRAYS]
+                          [--saved_model_tag_set SAVED_MODEL_TAG_SET]
+                          [--saved_model_signature_key SAVED_MODEL_SIGNATURE_KEY]
+                          [--std_dev_values STD_DEV_VALUES]
+                          [--mean_values MEAN_VALUES]
+                          [--default_ranges_min DEFAULT_RANGES_MIN]
+                          [--default_ranges_max DEFAULT_RANGES_MAX]
+                          [--drop_control_dependency DROP_CONTROL_DEPENDENCY]
+                          [--reorder_across_fake_quant REORDER_ACROSS_FAKE_QUANT]
+                          [--change_concat_input_ranges CHANGE_CONCAT_INPUT_RANGES]
+                          [--allow_custom_ops ALLOW_CUSTOM_OPS]
+ tflite_convert.py: error:
+
+
+
+tflite_convert --output_file=model_quant.tflite \
+ --keras_model_file=model.h5 \
+ --inference_type=QUANTIZED_UINT8 \
+ --input_arrays=input_1 \
+ --output_arrays=predictions/Softmax \
+ --mean_values=128 \
+ --std_dev_values=127 \
+ --input_shape="1,224,224,3"
+
+
+tflite_convert \
+  --output_file=keras_mnist_quantized_uint8.tflite \
+  --keras_model_file=mnist_cnn.h5 \
+  --inference_type=QUANTIZED_UINT8 \
+  --mean_values=128 \
+  --std_dev_values=127 \
+  --default_ranges_min=0 \
+  --default_ranges_max=255 \
+  --input_arrays=conv2d_1_input \
+  --output_arrays=dense_2/Softmax
+
+
+tflite_convert \
+--graph_def_file=optimized_graph.pb \
+--output_format=TFLITE \
+--output_file=mobilenet_v2_new.tflite \
+--inference_type=QUANTIZED_UINT8 \
+--input_arrays=input \
+--output_arrays=final_result \
+--input_shapes=1,224,224,3 \
+--mean_values=128 --std_dev_values=127 \
+--default_ranges_min=0 --default_ranges_max=255
+
+
+
+
+
+
+
+
+@ZJPUBG In the last step I mentioned, invoke toco to convert .pb into int8 tflite FlatBuffer, make sure to set
+--inference_type=QUANTIZED_UINT8 and --inference_input_type=QUANTIZED_UINT8
+
+
+
+
+and this one works but does not qunatizie the output
+
+
+
+
+tflite_convert --output_file=model_quant.tflite \
+ --keras_model_file=model.h5 \
+ --inference_type=QUANTIZED_UINT8 \
+ --mean_values=128 \
+ --std_dev_values=127 
+
+ xxd -i model_quant.tflite model_quant.h
+
+
+
+
+
+
+
 ```
