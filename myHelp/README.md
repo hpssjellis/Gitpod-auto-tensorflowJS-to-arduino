@@ -175,6 +175,9 @@ note tensorflowjs_convert seems fairly up to date with options:
 tensorflowjs_convert -h 
 ```
 
+
+```
+
 usage: TensorFlow.js model converters. [-h] [--input_format {keras_saved_model,tf_frozen_model,tfjs_layers_model,keras,tf_saved_model,tf_hub}]
                                        [--output_format {keras,keras_saved_model,tfjs_graph_model,tfjs_layers_model}]
                                        [--signature_name SIGNATURE_NAME] [--saved_model_tags SAVED_MODEL_TAGS]
@@ -239,4 +242,4 @@ optional arguments:
   --experiments EXPERIMENTS
                         Enable experimental features, you should only enable this flag when using Python3 and TensorFlow nightly build.
 
-
+```
