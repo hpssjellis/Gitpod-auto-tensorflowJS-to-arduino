@@ -168,3 +168,74 @@ or
 https://heartbeat.fritz.ai/8-bit-quantization-and-tensorflow-lite-speeding-up-mobile-inference-with-low-precision-a882dfcafbbd
 
 
+
+note tensorflowjs_convert seems fairly up to date with options:
+
+
+```
+usage: TensorFlow.js model converters. [-h] [--input_format {keras_saved_model,tf_frozen_model,tfjs_layers_model,keras,tf_saved_model,tf_hub}]
+                                       [--output_format {keras,keras_saved_model,tfjs_graph_model,tfjs_layers_model}]
+                                       [--signature_name SIGNATURE_NAME] [--saved_model_tags SAVED_MODEL_TAGS]
+                                       [--quantize_float16 [QUANTIZE_FLOAT16]] [--quantize_uint8 [QUANTIZE_UINT8]]
+                                       [--quantize_uint16 [QUANTIZE_UINT16]] [--quantization_bytes {1,2}] [--split_weights_by_layer] [--version]
+                                       [--skip_op_check] [--strip_debug_ops STRIP_DEBUG_OPS] [--weight_shard_size_bytes WEIGHT_SHARD_SIZE_BYTES]
+                                       [--output_node_names OUTPUT_NODE_NAMES] [--control_flow_v2 CONTROL_FLOW_V2] [--experiments EXPERIMENTS]
+                                       [input_path] [output_path]
+
+positional arguments:
+  input_path            Path to the input file or directory. For input format "keras", an HDF5 (.h5) file is expected. For input format
+                        "tensorflow", a SavedModel directory, frozen model file, or TF-Hub module is expected.
+  output_path           Path for all output artifacts.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input_format {keras_saved_model,tf_frozen_model,tfjs_layers_model,keras,tf_saved_model,tf_hub}
+                        Input format. For "keras", the input path can be one of the two following formats: - A topology+weights combined HDF5
+                        (e.g., generated with `tf.keras.model.save_model()` method). - A weights-only HDF5 (e.g., generated with Keras Model's
+                        `save_weights()` method). For "keras_saved_model", the input_path must point to a subfolder under the saved model folder
+                        that is passed as the argument to tf.contrib.save_model.save_keras_model(). The subfolder is generated automatically by
+                        tensorflow when saving keras model in the SavedModel format. It is usually named as a Unix epoch time (e.g., 1542212752).
+                        For "tf" formats, a SavedModel, frozen model, or TF-Hub module is expected.
+  --output_format {keras,keras_saved_model,tfjs_graph_model,tfjs_layers_model}
+                        Output format. Default: tfjs_graph_model.
+  --signature_name SIGNATURE_NAME
+                        Signature of the SavedModel Graph or TF-Hub module to load. Applicable only if input format is "tf_hub" or
+                        "tf_saved_model".
+  --saved_model_tags SAVED_MODEL_TAGS
+                        Tags of the MetaGraphDef to load, in comma separated string format. Defaults to "serve". Applicable only if input format is
+                        "tf_saved_model".
+  --quantize_float16 [QUANTIZE_FLOAT16]
+                        Comma separated list of node names to apply float16 quantization. You can also use wildcard symbol (*) to apply
+                        quantization to multiple nodes (e.g., conv/*/weights). When the flag is provided without any nodes the default behavior
+                        will match all nodes.
+  --quantize_uint8 [QUANTIZE_UINT8]
+                        Comma separated list of node names to apply 1-byte affine quantization. You can also use wildcard symbol (*) to apply
+                        quantization to multiple nodes (e.g., conv/*/weights). When the flag is provided without any nodes the default behavior
+                        will match all nodes.
+  --quantize_uint16 [QUANTIZE_UINT16]
+                        Comma separated list of node names to apply 2-byte affine quantization. You can also use wildcard symbol (*) to apply
+                        quantization to multiple nodes (e.g., conv/*/weights). When the flag is provided without any nodes the default behavior
+                        will match all nodes.
+  --quantization_bytes {1,2}
+                        (Deprecated) How many bytes to optionally quantize/compress the weights to. 1- and 2-byte quantizaton is supported. The
+                        default (unquantized) size is 4 bytes.
+  --split_weights_by_layer
+                        Applicable to keras input_format only: Whether the weights from different layers are to be stored in separate weight
+                        groups, corresponding to separate binary weight files. Default: False.
+  --version, -v         Show versions of tensorflowjs and its dependencies
+  --skip_op_check       Skip op validation for TensorFlow model conversion.
+  --strip_debug_ops STRIP_DEBUG_OPS
+                        Strip debug ops (Print, Assert, CheckNumerics) from graph.
+  --weight_shard_size_bytes WEIGHT_SHARD_SIZE_BYTES
+                        Shard size (in bytes) of the weight files. Currently applicable only when output_format is tfjs_layers_model or
+                        tfjs_graph_model.
+  --output_node_names OUTPUT_NODE_NAMES
+                        The names of the output nodes, separated by commas. E.g., "logits,activations". Applicable only if input format is
+                        "tf_frozen_model".
+  --control_flow_v2 CONTROL_FLOW_V2
+                        Enable control flow v2 ops, this would improve inference performance on models with branches or loops.
+  --experiments EXPERIMENTS
+                        Enable experimental features, you should only enable this flag when using Python3 and TensorFlow nightly build.
+gitpod /workspace/Gitpod-auto-tensorflowJS-to-arduino $ 
+
+```
