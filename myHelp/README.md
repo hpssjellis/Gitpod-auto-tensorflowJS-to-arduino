@@ -146,11 +146,25 @@ tflite_convert --output_file=model_quant.tflite \
  --std_dev_values=127 
 
  xxd -i model_quant.tflite model_quant.h
-
-
-
-
-
+ 
+ 
 
 
 ```
+
+
+read cool stuff by vincent muyller
+
+https://itnext.io/shrink-your-tensorflow-js-web-model-size-with-weight-quantization-6ddb4fcb6d0d
+
+and
+
+https://itnext.io/18-tips-for-training-your-own-tensorflow-js-models-in-the-browser-3e40141c9091
+
+
+
+or
+
+https://heartbeat.fritz.ai/8-bit-quantization-and-tensorflow-lite-speeding-up-mobile-inference-with-low-precision-a882dfcafbbd
+
+
