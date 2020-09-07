@@ -203,6 +203,8 @@ optional arguments:
                         For "tf" formats, a SavedModel, frozen model, or TF-Hub module is expected.
   --output_format {keras,keras_saved_model,tfjs_graph_model,tfjs_layers_model}
                         Output format. Default: tfjs_graph_model.
+                        ```
+                        ```
   --signature_name SIGNATURE_NAME
                         Signature of the SavedModel Graph or TF-Hub module to load. Applicable only if input format is "tf_hub" or
                         "tf_saved_model".
@@ -224,6 +226,8 @@ optional arguments:
   --quantization_bytes {1,2}
                         (Deprecated) How many bytes to optionally quantize/compress the weights to. 1- and 2-byte quantizaton is supported. The
                         default (unquantized) size is 4 bytes.
+                        ```
+                        ```
   --split_weights_by_layer
                         Applicable to keras input_format only: Whether the weights from different layers are to be stored in separate weight
                         groups, corresponding to separate binary weight files. Default: False.
