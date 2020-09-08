@@ -264,3 +264,8 @@ https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/python/tfli
 Tensorflowjs_convert main area also callled tfjs_converter
 https://github.com/tensorflow/tfjs/tree/master/tfjs-converter
 
+
+
+This page by Mueller is really interesting but probably deprecated
+https://itnext.io/shrink-your-tensorflow-js-web-model-size-with-weight-quantization-6ddb4fcb6d0d
+
