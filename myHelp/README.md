@@ -250,3 +250,17 @@ optional arguments:
                         Enable experimental features, you should only enable this flag when using Python3 and TensorFlow nightly build.
 
 ```
+
+
+
+These could be very helpful
+
+
+
+tflite_convert main python program
+https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/python/tflite_convert.py
+
+
+Tensorflowjs_convert main area also callled tfjs_converter
+https://github.com/tensorflow/tfjs/tree/master/tfjs-converter
+
