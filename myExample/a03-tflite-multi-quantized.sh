@@ -24,3 +24,4 @@ xxd -i model_tf_INT8.tflite model_tf_INT8.h
 
 
 
+## tensorflowjs_converter --quantization_bytes 1 --input_format=tf_frozen_model --output_node_names=logits/BiasAdd --saved_model_tags=serve ./model/input_graph.pb ./web_model
