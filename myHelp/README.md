@@ -269,3 +269,10 @@ https://github.com/tensorflow/tfjs/tree/master/tfjs-converter
 This page by Mueller is really interesting but probably deprecated
 https://itnext.io/shrink-your-tensorflow-js-web-model-size-with-weight-quantization-6ddb4fcb6d0d
 
+deprecated but interesting
+
+```
+tensorflowjs_converter --quantization_bytes 1 --input_format=tf_frozen_model --output_node_names=logits/BiasAdd --saved_model_tags=serve ./model/input_graph.pb ./web_model
+
+```
+
