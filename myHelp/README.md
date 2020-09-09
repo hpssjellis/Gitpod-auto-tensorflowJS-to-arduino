@@ -284,6 +284,5 @@ BEST THAT i HAVE SO FAR
 
 
 tensorflowjs_converter --input_format=tfjs_layers_model --output_format=keras_saved_model ./model.json ./saved_model
-tensorflowjs_converter --quantize_uint8  --output_node_names=logits/BiasAdd --saved_model_tags=serve ./saved_model ./web_model/model.json
-
+tensorflowjs_converter --quantize_uint8  --output_node_names=logits/BiasAdd --saved_model_tags=serve ./saved_model ./web_model
 ```
