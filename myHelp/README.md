@@ -290,10 +290,11 @@ tensorflowjs_converter --quantize_uint8  --output_node_names=logits/BiasAdd --sa
 YES this works
 
 ```
-tensorflowjs_converter  --input_format=tfjs_layers_model --output_format=tfjs_layers_model --quantize_uint8  --output_node_names=anything  ./model.json ./web_model
+
+tensorflowjs_converter  --input_format=tfjs_layers_model --output_format=tfjs_layers_model --quantize_uint8  --output_node_names=* ./model.json ./web_model
 
 tensorflowjs_converter --input_format=tfjs_layers_model --output_format=keras_saved_model ./web_model/model.json ./web_model
 tflite_convert --keras_model_file ./web_model/ --output_file ./web_model/model8.tflite
-xxd -i ./web_model/model5.tflite ./web_model/model8.h
+xxd -i ./web_model/model8.tflite ./web_model/model8.h
 
 ```
