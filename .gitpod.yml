@@ -5,7 +5,7 @@ image:
 tasks:
   - init: pip install tf-nightly                                                   &&
           pip install tensorflowjs                                                 &&
-          pip install netron    dask[delayed]                                                 &&
+          pip install netron    "dask[delayed]"                                                 &&
           cd myExample                                                             &&
           chmod +x a01-convert-tfjs-arduino.sh                                     && 
           chmod +x a02-tfjs-read.json.sh                                           && 
