@@ -1,0 +1,24 @@
+image:
+  file: .gitpod.Dockerfile
+  
+  
+tasks:
+  - init: pip install tf-nightly                                                   &&
+          pip install tensorflowjs                                                 &&
+          pip install netron    "dask[delayed]"                                                 &&
+          cd myExample                                                             &&
+          chmod +x a01-convert-tfjs-arduino.sh                                     && 
+          chmod +x a02-tfjs-read.json.sh                                           && 
+          chmod +x a03-tflite-multi-quantized.sh                                   &&    
+          cp  a01-convert-tfjs-arduino.sh ../myFolder                              && 
+          cp  a02-tfjs-read.json.sh ../myFolder                                    && 
+          cp  a03-tflite-multi-quantized.sh ../myFolder                            && 
+          ./a01-convert-tfjs-arduino.sh                                            &&                                             
+          cd ..                                                                    &&
+          cd myFolder                                                              &&
+          tflite_convert --help                                                    &&
+          tensorflowjs_converter --help                                            &&
+          xxd --help                                                               &&
+          echo "upload your model.json and model.weights.bin files here then run ./a01-convert-tfjs-arduino.sh"                                                                                                                          
+
+              
