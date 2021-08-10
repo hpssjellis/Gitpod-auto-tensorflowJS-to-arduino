@@ -3,7 +3,8 @@ image:
   
   
 tasks:
-  - init: python3 -m pip install tf-nightly  tensorflowjs  netron    "dask[delayed]"  &&
+  - init: python3 -m pip --upgrade pip                                             &&
+          python3 -m pip install tf-nightly  tensorflowjs  netron                  &&
           cd myExample                                                             &&
           chmod +x a01-convert-tfjs-arduino.sh                                     && 
           chmod +x a02-tfjs-read.json.sh                                           && 
