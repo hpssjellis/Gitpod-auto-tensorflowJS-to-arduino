@@ -110,3 +110,8 @@ then the following did the conversion
 ```
 tensorflowjs_converter --input_format=tf_saved_model  ./ ./forweb/
 ```
+
+
+Testing edgeImpulse https://hpssjellis.github.io/Gitpod-auto-tensorflowJS-to-arduino/forweb/index.html
+
+edge Impulse WASM at https://hpssjellis.github.io/my-examples-of-edge-impulse/public/edge-models/single-heart-rock/index.html
