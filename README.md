@@ -92,6 +92,7 @@ Issues Aug10,2021   trying these as tfjs converter is not working
 ```
 pyenv install 3.6.8
 pyenv local 3.6.8
+python3 -m pip install --upgrade pip 
 
 ```
 
