@@ -96,3 +96,17 @@ python3 -m pip install --upgrade pip
 
 ```
 
+Gitpod does not seem to work, but my ubuntu machine seemed fine just running  
+
+```
+pip3 install tansorflowjs
+```
+
+seemed to install everything
+
+then the following did the conversion
+
+
+```
+tensorflowjs_converter --input_format=tf_saved_model  ./ ./forweb/
+```
