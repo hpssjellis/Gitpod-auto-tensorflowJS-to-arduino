@@ -115,3 +115,13 @@ tensorflowjs_converter --input_format=tf_saved_model  ./ ./forweb/
 Testing edgeImpulse https://hpssjellis.github.io/Gitpod-auto-tensorflowJS-to-arduino/forweb/index.html
 
 edge Impulse WASM at https://hpssjellis.github.io/my-examples-of-edge-impulse/public/edge-models/single-heart-rock/index.html
+
+
+
+
+Not yet tested but converting an stm32flash dfu file to an arduino array this might work
+
+```
+echo -n "const " > fw.h && xxd -i v0.4.0-send-ok-E.ino.dfu >> fw.h
+
+```
